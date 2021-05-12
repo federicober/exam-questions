@@ -62,4 +62,4 @@ def func(n):
 
 ---
 
-**Q:** What (usually) unexpected behaviour will arise from the following statement `matrix = [[0] * n_columns] * n_rows` ?Add pytho
+**Q:** What (usually) unexpected behaviour will arise from the following statement `matrix = [[0] * n_columns] * n_rows` ?
