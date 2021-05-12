@@ -1,5 +1,7 @@
 # exam-questions
 
+The one interview you don't want to stumble upon.
+
 ## Python
 
 ---
@@ -46,7 +48,7 @@ def func(n):
 
 ---
 
-**Q:** Exaplain the usage of the `else` clause in `try` and `for` blocks.
+**Q:** Explain the usage of the `else` clause in `try` and `for` blocks.
 
 ---
 
@@ -63,3 +65,7 @@ def func(n):
 ---
 
 **Q:** What (usually) unexpected behaviour will arise from the following statement `matrix = [[0] * n_columns] * n_rows` ?
+
+---
+
+**Q:** What is the difference between an iterable and an iterator? What function(s) can be called in them to turn them into the other?
