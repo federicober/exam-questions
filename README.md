@@ -1,1 +1,65 @@
 # exam-questions
+
+## Python
+
+---
+
+**Q:** What is the difference between multi-threading, multi-processing and asynchronous? How does Python differ from other programming languages?
+
+---
+
+**Q:** What is the space-complexity of `range(n)` in Python3? Is it the same in Python2? Why?
+
+---
+
+**Q:** What is a `Sequence` in Python?
+
+---
+
+**Q:** What is the difference between `__getitem__` and `__getattr__`? When are they called?
+
+---
+
+**Q:** Explain the following concepts as related to testing: fixture, mock, patch.
+
+---
+
+**Q:** What does the following function do? How can it be improved?
+
+```python
+def func(n):
+    yield n
+    yield from func(n+1)
+```
+
+---
+
+**Q:** Python is written in what language? Name other implementations.
+
+---
+
+**Q:** What underlying data structure is found at the base of (almost) all Python objects? How can you access it? Can you name one type of class that uses a different base structure?
+
+---
+
+**Q:** What is a closure? Where is it commonly used?
+
+---
+
+**Q:** Exaplain the usage of the `else` clause in `try` and `for` blocks.
+
+---
+
+**Q:** What is the Garbage collector in Python? How does it work? How can you reference an object without affecting its garbage collection?
+
+---
+
+**Q:** Exaplain the difference between methods (or any other object) that have: a single-leading underscore (`_func`), double-leading underscores (`__func`), a double-leading-and-trailing underscores (`__func__`).
+
+---
+
+**Q:** Exaplain the difference between the expressions `x == True` and `x is True`? Why is the `is` operator must commonly used with booleans and None?
+
+---
+
+**Q:** What (usually) unexpected behaviour will arise from the following statement `matrix = [[0] * n_columns] * n_rows` ?Add pytho
