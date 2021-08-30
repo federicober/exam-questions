@@ -26,16 +26,6 @@ The one interview you don't want to stumble upon.
 
 ---
 
-**Q:** What does the following function do? How can it be improved?
-
-```python
-def func(n):
-    yield n
-    yield from func(n+1)
-```
-
----
-
 **Q:** Python is written in what language? Name other implementations.
 
 ---
@@ -69,3 +59,31 @@ def func(n):
 ---
 
 **Q:** What is the difference between an iterable and an iterator? What function(s) can be called in them to turn them into the other?
+
+
+## Gotchas
+
+
+**Q:** This functions tries to build an infinite generator. What will happen?
+
+```python
+def func(n):
+    yield n
+    yield from func(n+1)
+```
+
+---
+
+**Q:** What will happen when trying to use the following OOP system *at scale*.
+
+```python
+from typing import List
+
+class Developer:
+    def __init__(self, applications: "List[Application]"):
+        self.applications = applications
+
+class Application:
+    def __init__(self, developer: "Developer"):
+        self.developer = developer
+```
