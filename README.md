@@ -22,6 +22,10 @@ The one interview you don't want to stumble upon.
 
 ---
 
+**Q:** What is the difference between `__getatrribute__` and `__getattr__`? When are they called?
+
+---
+
 **Q:** Explain the following concepts as related to testing: fixture, mock, patch.
 
 ---
@@ -60,6 +64,13 @@ The one interview you don't want to stumble upon.
 
 **Q:** What is the difference between an iterable and an iterator? What function(s) can be called in them to turn them into the other?
 
+---
+
+**Q:** What is the `__mro__`? How does it relate to `__dict__` and `__getattr__`?
+
+---
+
+**Q:** What is the Descriptor protocol? How does it relate to the previous question?
 
 ## Gotchas
 
@@ -74,16 +85,15 @@ def func(n):
 
 ---
 
-**Q:** What will happen when trying to use the following OOP system *at scale*.
+**Q:** What will happen when running the following code?
 
 ```python
-from typing import List
+a = object()
+b = object()
 
-class Developer:
-    def __init__(self, applications: "List[Application]"):
-        self.applications = applications
+a.b = b
+b.a = a
 
-class Application:
-    def __init__(self, developer: "Developer"):
-        self.developer = developer
+del a
+del b
 ```
