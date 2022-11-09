@@ -75,12 +75,15 @@ The one interview you don't want to stumble upon.
 ## Gotchas
 
 
-**Q:** This functions tries to build an infinite generator. What will happen?
+**Q:** What will happen when running the following code?
 
 ```python
 def func(n):
     yield n
     yield from func(n+1)
+    
+for i in func(n):
+    print(i)
 ```
 
 ---
@@ -96,4 +99,27 @@ b.a = a
 
 del a
 del b
+```
+
+**Q:** What will happen when running the following code?
+
+```
+class A:
+    def __str__(self):
+        print("Calling A")
+        return "foo"
+
+class B(A):
+    def __str__(self):
+        print("Calling B")
+        return super().__str__()
+
+class C(A):
+    def __str__(self):
+        print("Calling C")
+
+class D(B, C):
+    def __str__(self):
+        print("Calling D")
+        return super().__str__()
 ```
