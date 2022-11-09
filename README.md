@@ -103,7 +103,7 @@ del b
 
 **Q:** What will happen when running the following code?
 
-```
+```python
 class A:
     def __str__(self):
         print("Calling A")
