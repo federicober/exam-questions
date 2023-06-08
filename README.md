@@ -88,17 +88,39 @@ for i in func(n):
 
 ---
 
-**Q:** What will happen when running the following code?
+**Q:** What will be the output of the following code?
 
 ```python
-a = object()
-b = object()
+class Node:
+    def __init__(self, name: str) -> None:
+        self._name = name
 
-a.b = b
-b.a = a
+    def next(self, value: "Node") -> None:
+        self._next = value
+
+    def __del__(self) -> None:
+        print("Inside __del__", self._name)
+
+    def __delete__(self, instance) -> None:
+        print("Inside __delete__", self._name)
+
+
+a = Node("a")
+b = Node("b")
+c = Node("c")
+
+# create a graph that looks like this
+# a -> b <-> c
+a.next(b)
+b.next(c)
+c.next(b)
+
 
 del a
 del b
+del c
+
+print("finished script")
 ```
 
 **Q:** What will happen when running the following code?
@@ -122,4 +144,6 @@ class D(B, C):
     def __str__(self):
         print("Calling D")
         return super().__str__()
+
+print(D())
 ```
