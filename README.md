@@ -123,6 +123,8 @@ del c
 print("finished script")
 ```
 
+How would it change if we call `gc.collect()` att any point? 
+
 **Q:** What will happen when running the following code?
 
 ```python
